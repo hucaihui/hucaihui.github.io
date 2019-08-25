@@ -13,4 +13,4 @@ echo -e "$clear_color"
 git push origin master && echo "$set_color git push origin master done" 
 echo -e "$clear_color"
 
-read -n 1
+read -p "press anything to continue"
