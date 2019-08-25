@@ -1,0 +1,66 @@
+<footer class="site-footer">
+  <script id="dsq-count-scr" src="//huyongde.disqus.com/count.js" async></script>
+    
+  <div class="wrapper">
+
+    <h2 class="footer-heading">{{ site.title }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <!--<li>{{ site.title }}</li>
+          -->
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description }}</p>
+
+      </div>
+      <div class="footer-col footer-col-2">
+        <a href="http://www.clustrmaps.com/map/Huyongde.github.io" title="Visitor Map for Huyongde.github.io"><img src="//www.clustrmaps.com/map_v2.png?u=wKip&d=LAPgm6Mtc8oBhMj5MtPoG5S3OdRWiixBtgLz-BWyJSY" /></a>
+      </div>
+    </div>
+
+  </div>
+
+<div class="wrapper">
+    <div class="footer-col-wrapper">
+        <div class="footer-col footer-col-1">
+            <span id="busuanzi_container_page_pv">
+                  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+              </span>
+        </div>
+        <div class="footer-col footer-col-2">
+            <span id="busuanzi_container_site_pv">
+                本站总访问量<span style="font-weight:bold;" id="busuanzi_value_site_pv"></span>次
+            </span>
+        </div>
+        <div class="footer-col footer-col-3">
+            <span id="busuanzi_container_site_uv">
+                  本站访客数<span style="font-weight:bold;" id="busuanzi_value_site_uv"></span>人
+            </span>
+
+        </div>
+    </div>
+
+</div>
+
+</footer>

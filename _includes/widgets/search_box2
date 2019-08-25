@@ -1,0 +1,66 @@
+<script type="text/javascript" src="{{ ASSET_PATH }}/js/lunr.min.js"></script>
+<form id="search-form">
+  <input id="query" type="text" placeholder="搜索"></input>
+  <button type="submit"><i class="icon-search"></i></button>
+</form>
+
+<script type="text/javascript">
+jQuery(function() {
+  // Initalize lunr with the fields it will be searching on. I've given title
+  // a boost of 10 to indicate matches on this field are more important.
+  window.idx = lunr(function () {
+    this.field('id');
+    this.field('title', { boost: 10 });
+    this.field('author');
+    this.field('category');
+  });
+
+  // Download the data from the JSON file we generated
+  window.data = $.getJSON('/search_data.json');
+
+  // Wait for the data to load and add it to lunr
+  window.data.then(function(loaded_data){
+    $.each(loaded_data, function(index, value){
+      window.idx.add(
+        $.extend({ "id": index }, value)
+      );
+    });
+  });
+
+  // Event when the form is submitted
+  $("#search-form").submit(function(){
+      event.preventDefault();
+      var query = $("#query").val(); // Get the value for the text field
+      if (!query) { alert("请输入搜索内容");}
+      var results = window.idx.search(query); // Get lunr to perform a search
+      display_search_results(results); // Hand the results off to be displayed
+  });
+
+  function display_search_results(results) {
+    var $search_results = $("#main-content");
+
+    // Wait for data to load
+    window.data.then(function(loaded_data) {
+
+      // Are there any results?
+      if (results.length) {
+        $search_results.empty(); // Clear any old results
+
+        // Iterate over the results
+        results.forEach(function(result) {
+          var item = loaded_data[result.ref];
+
+          // Build a snippet of HTML for this result
+          var appendString = '<article class="nested"><header><h2><a href="' + item.url + '">' + item.title+ '</a></h2></header>' +'<section><p>'+ item.title+ '</p></section><footer><p>更新日期：' + item.date + '</p></footer></article>';
+
+          // Add it to the results
+          $search_results.append(appendString);
+        });
+      } else {
+        $search_results.html('<li>No results found</li>');
+      }
+    });
+  }
+});
+
+</script>

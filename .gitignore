@@ -1,1 +1,5 @@
-_site/
+/_site
+/nohup.out
+/.idea/
+/cmake-build-debug
+

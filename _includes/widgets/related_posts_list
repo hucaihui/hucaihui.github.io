@@ -1,0 +1,26 @@
+<a href="{{ HOME_PATH }}" title="查看相关文章"><i class="icon-fixed-width icon-edit"></i> 相关文章</a>
+<ul>
+    {% assign hasSimilar = '' %}
+    {% for post in site.posts %}
+        {% if post.id != page.id %}
+        {% assign postHasSimilar = false %}
+        {% for tag in post.tags %}
+            {% if postHasSimilar == false %}
+                {% for thisTag in page.tags %}
+                    {% if postHasSimilar == false and hasSimilar.size < 5 and post != page and tag == thisTag %}
+<li>
+  <a href="{{ post.url }}" title="查看《{{ post.title }}》">{{ post.title }}</a>
+</li>
+                        {% assign postHasSimilar = true %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+
+        {% if postHasSimilar == true %}
+            {% capture hasSimilar %}{{ hasSimilar }}*{% endcapture %}
+        {% endif %}
+
+        {% endif %}
+    {% endfor %}
+</ul>
