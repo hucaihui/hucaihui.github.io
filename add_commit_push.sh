@@ -12,3 +12,5 @@ fi
 echo -e "$clear_color"
 git push origin master && echo "$set_color git push origin master done" 
 echo -e "$clear_color"
+
+pause
