@@ -1,6 +1,6 @@
 ---
 title: 二叉树
-tag:二叉树 c++ 
+tag: binary-tree c++ 
 layout: post
 ---
 
