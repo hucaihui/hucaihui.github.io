@@ -1,3 +1,8 @@
+---
+title: 二叉树
+tag: binary-tree c++ 
+layout: post
+---
 
 <head>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
@@ -10,12 +15,6 @@
         });
     </script>
 </head>
-
----
-title: 二叉树
-tag: binary-tree c++ 
-layout: post
----
 
 ## 二叉树的性质
 性质1：在二叉树的第$i$层上至多有$2^{i-1}$个结点($i>=1$)；
