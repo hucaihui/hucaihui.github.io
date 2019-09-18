@@ -4,17 +4,6 @@ tag: binary-tree c++
 layout: post
 ---
 
-<head>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-    </script>
-</head>
 
 ## 二叉树的性质
 性质1：在二叉树的第$i$层上至多有$2^{i-1}$个结点($i>=1$)；
@@ -41,3 +30,16 @@ layout: post
 `注`：已经前序和后序遍历，不能确定一棵二叉树
 ### 层序遍历复原完全二叉树
 ### 符号表示法复原二叉树
+
+
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
