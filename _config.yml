@@ -10,7 +10,7 @@ paginate: 10
 encoding: utf-8
 highlighter: rouge
 #markdown: redcarpet
-#markdown: kramdown 
+markdown: kramdown 
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data", "tables"]
 
