@@ -1,7 +1,7 @@
 ---
-layout:post
-title:0-1背包问题
-tags:动态规划
+layout: post
+title: 0-1背包问题
+tags: 动态规划 0-1背包
 ---
 
 # 最优解
@@ -65,7 +65,7 @@ $$V(i,j)=V(i-1,j_i)+v_i$$
 -  $i=4,j=8,w_1=5,v_1=7,有j>w(1),故V(4,8)=max\{V(3,8),V(3,8-w_1)+v_1\}=max\{V(3,8),V(3,3)+v_1\}=max\{9,10\}=10$
 
 ## 代码
-[cpp实现](../src/cpp/0-1bag.cpp)
+[cpp实现](https://github.com/hucaihui/hucaihui.github.io/tree/master/src/cpp/0-1bag.cpp)
 
 ```
 int** bag(const int W, const int num, int w[], int v[]) {

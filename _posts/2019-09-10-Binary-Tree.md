@@ -20,7 +20,7 @@ layout: post
 
 ## 二叉树的遍历
 ### 前序
-<img src="../img/preOrder.png" width="240" align="middle" />  
+<img src="https://github.com/hucaihui/hucaihui.github.io/tree/master/img/preOrder.png" width="240" align="middle" />  
 
 > 遍历的顺序为：ABDGHCEIF
 ### 中序
@@ -46,7 +46,7 @@ void midOrder(Node* root) {   //中序遍历
 - 1、若树T为空树，则其括号表示为空
 - 2、若树T只包含一个结点，则其括号表示即为该结点本身
 - 3、若树T由根结点A和它的m棵子树T1,T2,...,Tm构成，则其括号表示为：A(T1的括号表示，T2的括号表示,... ,Tm的括号表示)
-<img src="../img/bracketNotation.png" height="200" align="middle"/>
+<img src="https://github.com/hucaihui/hucaihui.github.io/tree/master/img/bracketNotation.png" height="200" align="middle"/>
 
 表示：A(B,C(F,G,H),D,E(I,J))
 
@@ -59,7 +59,7 @@ void midOrder(Node* root) {   //中序遍历
 
 二叉树括号表示例：A(B(D(,G)),C(E,F))
 
-[cpp实现](../src/bracket_notation.cpp)
+[cpp实现](https://github.com/hucaihui/hucaihui.github.io/tree/master/src/cpp/bracket_notation.cpp)
 ```
 //节点定义
 struct Node{
@@ -108,7 +108,7 @@ int main() {
 
 ### 完全二叉树还原（层序遍历）
 
-[cpp实现](../src/cpp/symbol_notation1.cpp)
+[cpp实现](https://github.com/hucaihui/hucaihui.github.io/tree/master/src/cpp/symbol_notation1.cpp)
 ```
 //对于不带#号的层序遍历， 
 Node* buildTree(vector<int> nums) {
@@ -146,7 +146,7 @@ int main() {
 - 2、flag=1，为左孩子，遇#号，flag变为2，转为右孩子；
 - 3、flag=2，为右孩子，遇#号，flag++,至下一步弹出下一个父结点。
 
-[cpp实现](../src/cpp/symbol_notation2.cpp)
+[cpp实现](https://github.com/hucaihui/hucaihui.github.io/tree/master/src/cpp/symbol_notation2.cpp)
 ```
 Node* buildTree(string seq) {
     //if (0 == seq.length()) return nullptr;
