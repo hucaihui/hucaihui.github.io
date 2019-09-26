@@ -13,4 +13,4 @@ echo -e "$clear_color"
 git push origin master && echo -e "$set_color git push origin master done" 
 echo -e "$clear_color"
 
-#read -p "press Enter to back" 
+read -p "press Enter to back" 
