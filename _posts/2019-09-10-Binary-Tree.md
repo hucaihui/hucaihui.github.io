@@ -1,67 +1,34 @@
 ---
-<<<<<<< HEAD
-title: 2019数模A题简单demo
-tag:demo py 
-layout: post
----
-
-## 注
-config.py以及customize_service.py无需改动
-
-运行程序会在`./model/`下生成相应的.pb文件
-
-提交测试的话和baseline一样
-
-```buildoutcfg
-import tensorflow as tf
-if __name__=='__main__':
-
-    n = 17
-    X = tf.placeholder(tf.float32, shape=[None,n], name='input')  # input
-    W1 = tf.get_variable("W1", [n,1], initializer=tf.zeros_initializer())
-    b1 = tf.constant(65.245615,tf.float32)
-    Z = tf.matmul(X,W1) + b1     # outputs
-
-    init = tf.global_variables_initializer()
-    with tf.Session() as sess:
-        sess.run(init)
-        # 保存模型
-        tf.saved_model.simple_save(sess, './model/', inputs={"myInput": X}, outputs={"myOutput": Z})
-```
-
-
-
-=======
 title: 二叉树
-tag: binary-tree c++ 
+tag: tree c++ 
 layout: post
 ---
-
 
 ## 二叉树的性质
-性质1：在二叉树的第$i$层上至多有$2^{i-1}$个结点($i>=1$)；
+性质1：在二叉树的第$i$层上至多有$2^{i-1}$个结点($i>=1$)
 
-性质2：深度为$k$的二叉树至多有$2^{k}-1$个结点($k>=1$)；
+性质2：深度为$k$的二叉树至多有$2^{k}-1$个结点($k>=1$)
 
-性质3：对任何一棵二叉树T，如果其终端结点数（叶子结点）为$n_0$，度为2的结点数为$n_2$，则$n_0=n_2+1$；
+性质3：对任何一棵二叉树，终端结点（叶子结点）数为$n_0$，度为2的结点数为$n_2$,则$n_0=n_2+1$
 
-性质4：具有$n$个结点的完全二叉树的深度为$\lfloor{log_2n}\rfloor+1$；
+性质4：具有$n$个结点的完全二叉树的深度为$\lfloor log_2n \rfloor+1$
 
-性质5：具有$n$个结点的完全二叉树按层序编号，对任一结点$i$:
-1、如果$i=1$，则结点$i$是二叉树的概，无双亲；
-2、如果$i>1$，则其双亲是结点$\lfloor{i/2}\rfloor$；
-3，对结点$i$，满足$2i  \le n |2i+1 \le n$，$i$的左孩子是$2i$，右孩子是$2i+1$。
+性质5：对一棵有n个结点的完全二叉树按层序编号，对作一结点i
+- 1、$i=1$，则结点$i$是根结点。
+- 2、$i>1$，其双亲结点是$\lfloor i/2 \rfloor$.
+- 3、$i$有左或右孩子的情况下，$i$的左孩子是$2i$，右孩子是$2i+1$
 
-## 二叉树的遍历 
-### 前序遍历
-### 中序遍历 
-### 后序遍历
-### 层序遍历
+## 二叉树的遍历
+### 前序
 
-## 重建二叉树
-### 前序+中序$or$中序+后序遍历二叉树
-`注`：已经前序和后序遍历，不能确定一棵二叉树
-### 层序遍历复原完全二叉树
-### 符号表示法复原二叉树
->>>>>>> bea2859b177dd60d3a5052ec9ce92f00315f1a24
+### 中序
 
+### 后序
+
+### 层序
+
+## 二叉树的还原
+
+### 根据**前序+中序**还原
+
+### 根据**前序+后序**还原
