@@ -6,13 +6,9 @@ permalink: /about
 
 熟悉的
 
-* php go lua shell python 
-* nginx
-* memcache redis
-* mysql
-* wireshark tcpdump charles 
-* vim
-* tennis bodybuilding
+* c++ 
+* python 
+
 
 正在学习的
 
